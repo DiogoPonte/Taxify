@@ -1,0 +1,425 @@
+/* Container styles */
+.results-container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: #2c3e50;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header styles */
+.results-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 0 2rem;
+  gap: 1rem;
+}
+
+.results-header h2 {
+  margin: 0;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.total-gain {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  text-align: center;
+}
+
+/* Filter styles */
+.date-filters {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.date-filter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.date-filter label {
+  font-size: 0.9rem;
+  color: #6c757d;
+  white-space: nowrap;
+}
+
+.date-filter input {
+  padding: 0.5rem;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #2c3e50;
+  outline: none;
+  transition: all 0.3s ease;
+  background: none;
+  
+}
+
+.date-filter input:hover {
+  border-color: #2c3e50;
+}
+
+.date-filter input:focus {
+  border-color: #007bff;
+  color: #007bff;
+}
+
+/* Tab styles */
+.tabs {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #dee2e6;
+  padding: 0 4rem;
+}
+
+.tab {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #6c757d;
+  position: relative;
+  transition: color 0.3s ease;
+  outline: none;
+}
+
+.tab:focus {
+  outline: none;
+}
+
+.tab:hover {
+  color: #2c3e50;
+}
+
+.tab.active {
+  color: #007bff;
+  font-weight: 600;
+}
+
+.tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #007bff;
+}
+
+/* Export button and filter container */
+.export-buttons {
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4rem;
+}
+
+.export-buttons > div:first-child {
+  display: flex;
+  gap: 1rem;
+}
+
+.export-buttons button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.export-buttons button:hover {
+  background-color: #0056b3;
+}
+
+/* IRS Upload styles */
+.file-upload-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  padding: 0 4rem;
+}
+
+.file-upload-area {
+  border: 2px dashed #007bff;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+  transition: all 0.3s ease;
+  background-color: #f8f9fa;
+  cursor: pointer;
+}
+
+.file-upload-area:hover,
+.file-upload-area.drag-active {
+  border-color: #0056b3;
+  background-color: #f1f8ff;
+}
+
+.file-input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.file-upload-content {
+  pointer-events: none;
+}
+
+.file-upload-content p {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #495057;
+}
+
+.file-upload-content small {
+  display: block;
+  margin-top: 0.5rem;
+  color: #6c757d;
+}
+
+.error-message {
+  color: #dc3545;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  text-align: center;
+}
+
+/* Table container styles */
+.results-table {
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 2rem;
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 0 4rem;
+}
+
+/* Base table styles */
+table {
+  width: auto;
+  border-collapse: collapse;
+  background-color: white;
+  color: #2c3e50;
+}
+
+.capital-gains-table,
+.transactions-table {
+  width: auto;
+  margin: 0 auto;
+}
+
+/* Table cell styles */
+.capital-gains-table th,
+.capital-gains-table td,
+.transactions-table th,
+.transactions-table td {
+  padding: 0.75rem 0.5rem;
+  text-align: left;
+  border-bottom: 1px solid #dee2e6;
+  white-space: nowrap;
+}
+
+/* Column padding for readability */
+.capital-gains-table th:nth-child(1),
+.capital-gains-table td:nth-child(1),
+.transactions-table th:nth-child(3),
+.transactions-table td:nth-child(3) {
+  padding-right: 1rem;
+}
+
+.capital-gains-table th:nth-child(2),
+.capital-gains-table td:nth-child(2),
+.transactions-table th:nth-child(4),
+.transactions-table td:nth-child(4) {
+  padding-right: 1rem;
+}
+
+.transactions-table th:nth-child(1),
+.transactions-table td:nth-child(1),
+.transactions-table th:nth-child(2),
+.transactions-table td:nth-child(2),
+.transactions-table th:nth-child(5),
+.transactions-table td:nth-child(5),
+.transactions-table th:nth-child(6),
+.transactions-table td:nth-child(6),
+.transactions-table th:nth-child(7),
+.transactions-table td:nth-child(7) {
+  padding-right: 1rem;
+}
+
+/* Right-aligned numeric columns */
+.transactions-table th:nth-child(8),
+.transactions-table td:nth-child(8),
+.transactions-table th:nth-child(9),
+.transactions-table td:nth-child(9),
+.transactions-table th:nth-child(10),
+.transactions-table td:nth-child(10),
+.transactions-table th:nth-child(11),
+.transactions-table td:nth-child(11),
+.transactions-table th:nth-child(12),
+.transactions-table td:nth-child(12) {
+  text-align: right;
+  padding-left: 1rem;
+}
+
+/* Header styles */
+th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #495057;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+/* Row hover effects */
+tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* Buy/Sell row styles */
+tr.buy {
+  background-color: #f1f8f1;
+  color: #2c3e50;
+}
+
+tr.buy:hover {
+  background-color: #e8f5e8;
+}
+
+tr.sell {
+  background-color: #fff8f8;
+  color: #2c3e50;
+}
+
+tr.sell:hover {
+  background-color: #ffe8e8;
+}
+
+/* Profit/Loss colors */
+.positive {
+  color: #28a745;
+  font-weight: 600;
+}
+
+.negative {
+  color: #dc3545;
+  font-weight: 600;
+}
+
+/* Currency indicator */
+td[data-currency]::after {
+  content: attr(data-currency);
+  margin-left: 0.25rem;
+  color: #6c757d;
+  font-size: 0.9em;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .results-container {
+    padding: 0;
+  }
+
+  .results-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .export-buttons {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+
+  .export-buttons > div:first-child {
+    flex-direction: column;
+  }
+
+  .date-filters {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .date-filter {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .tabs {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .tab {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+
+  th, td {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Upload buttons */
+.upload-buttons {
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 4rem;
+}
+
+.upload-buttons > div {
+  display: flex;
+  gap: 1rem;
+}
+
+.upload-buttons button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.upload-buttons button:hover {
+  background-color: #218838;
+}
