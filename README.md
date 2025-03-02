@@ -1,50 +1,11 @@
-# React + TypeScript + Vite
+# DISCLAMIER
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+I have no idea how to program, let alone sometihng this complex I work in finance and this seemd like a good idea to pass my time. I only wrote a couple of lines of code to import the csv file, and Cursor wrote the rest. For some reason, it seems to work just fine, but the code is unreadable.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Input the CSV with your transactions from Degiro, and it calculates the Capital Gains for the sales you've done. You can filter by a range of dates.
+If you live in Portugal, you can upload your IRS XML file, and it will add the capital gains rows to your tax form.
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+YOUR TAXES ARE YOUR RESPONSIBILITY! USE AT YOUR OWN RISK!!! ALWAYS QUINTUPLE CHECK THE RESULTS!
